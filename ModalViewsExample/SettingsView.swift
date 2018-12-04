@@ -9,11 +9,16 @@
 import UIKit
 
 class SettingsView: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         colourState.selectedSegmentIndex = UISegmentedControl.noSegment
+        
     }
+    
+    
     
     @IBOutlet weak var colourState: UISegmentedControl!
     
@@ -21,15 +26,13 @@ class SettingsView: UIViewController {
 
         switch sender.selectedSegmentIndex {
         case 0:
-            print("red")
             UserDefaults.standard.set("red", forKey: "colour")
         case 1:
-            print("blue")
             UserDefaults.standard.set("blue", forKey: "colour")
         case 2:
             UserDefaults.standard.set("white", forKey: "colour")
         default:
-            print("nil")
+            print("no colour chosen")
         }
     }
     

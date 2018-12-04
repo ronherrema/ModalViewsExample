@@ -26,17 +26,53 @@
                                     <segue destination="gnM-2T-3Ln" kind="presentation" modalTransitionStyle="flipHorizontal" id="kHv-hw-dgq"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Animals" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iTt-fB-bwL" userLabel="Animals Text">
+                                <rect key="frame" x="16" y="137" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RKr-Lv-nfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8G-cR-XBH">
+                                <rect key="frame" x="16" y="295" width="140" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Clear animals"/>
+                                <connections>
+                                    <action selector="clearAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rs0-mV-Ik1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXo-6Y-wGj">
+                                <rect key="frame" x="16" y="77" width="116" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Add animal"/>
+                                <connections>
+                                    <action selector="addAnimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YEs-fI-UQh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="l8G-cR-XBH" firstAttribute="leading" secondItem="iTt-fB-bwL" secondAttribute="leading" id="Ake-Od-dgm"/>
+                            <constraint firstItem="iXo-6Y-wGj" firstAttribute="leading" secondItem="iTt-fB-bwL" secondAttribute="leading" id="QD9-qr-r61"/>
                             <constraint firstItem="oGl-J4-9vr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Thu-0G-zwy"/>
+                            <constraint firstItem="iXo-6Y-wGj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="Wsg-m3-AUM"/>
+                            <constraint firstItem="iTt-fB-bwL" firstAttribute="leading" secondItem="oGl-J4-9vr" secondAttribute="leading" id="YGm-kq-W2Z"/>
+                            <constraint firstItem="iTt-fB-bwL" firstAttribute="top" secondItem="iXo-6Y-wGj" secondAttribute="bottom" constant="19" id="cbX-5n-wIx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iTt-fB-bwL" secondAttribute="trailing" constant="119" id="eOo-tk-k1L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oGl-J4-9vr" secondAttribute="bottom" constant="20" id="oEn-5i-Zhy"/>
+                            <constraint firstItem="l8G-cR-XBH" firstAttribute="top" secondItem="iTt-fB-bwL" secondAttribute="bottom" constant="30" id="vtW-kf-QoV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animalsText" destination="iTt-fB-bwL" id="Bbh-ka-MfW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="657" y="27"/>
         </scene>
         <!--Settings View-->
         <scene sceneID="DSP-07-yFK">
